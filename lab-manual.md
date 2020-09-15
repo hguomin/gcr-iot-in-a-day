@@ -19,21 +19,23 @@ lab, you will plug in your IoT hub to a TSI environment.
 1.  Sign into Azure Portal using your subscription account
 
 2.  Select **+ Create a resource** in the upper left.
-![](media/mc/0-create-a-resource.PNG)
+
+    <img src="media/mc/0-create-a-resource.png" width="50%">
+
 3.  Select the **Internet of Things** category, then select **IoT Hub.**
 
-![](media/mc/1-select-iothub.PNG)
+    <img src="media/mc/1-select-iothub.png" width="50%">
 
 4.  Enter the following:
 
 | **Property**       | Description                                                                                                                          |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | **Subscription**   | Select the subscription to use for your IoT hub.                                                                                     |
-| **Resource Group** | Select your resource group for your IoT hub                                                                                          |
+| **Resource Group** | Select your resource group(or click "Create new" to create a new resource group) for your IoT hub                                                                                          |
 | **Region**         | This is the region in which you want your hub to be located. Select the location closest to you from the dropdown list.              |
 | **IoT Hub Name**   | Put in the name for your IoT Hub. This name must be globally unique. If the name you enter is available, a green check mark appears. |
 
-![](media/2300a54be036f5cbbcc9df7f595e5e0c.png)
+<img src="media/mc/2-create-hub-basics.png" width="80%">
 
 Click on “Next: Size and Scale”
 
@@ -41,50 +43,46 @@ Click on “Next: Size and Scale”
     the total number of units and 4 default device-to-cloud partitions (**all
     default settings**)
 
-![](media/a6428dba970cff55666742a9b1cde232.png)
+    <img src="media/mc/3-create-hub-scale.png" width="80%">
 
 Click on “Review + Create”
 
 6.  Review and click on “Create”
 
-![](media/008d4b2b28c2c3cea625dec1e519a249.png)
+    <img src="media/mc/4-create-hub-review.png" width="50%">
+
 
 *Define a new consumer group*
 
 TSI requires a unique consumer group for your hub. The following steps detail
 how you can create a new consumer group in your hub.
 
-1.  In your IoT hub, go to “Built-in endpoints”
+1.  In your IoT hub, go to “Built-in endpoints”, under the “Consumer Groups” section, type a unique name for your TSI consumer group to create one.
 
-![](media/4aa5d7bdb60002c263d971165e459b5a.png)
-
-2.  Under the “Consumer Groups” section, type a unique name for your TSI
-    consumer group to create one.
-
-![](media/061fb27db479a81656884eece297874c.png)
+    <img src="media/mc/5-create-tsi-cg.png" width="100%">
 
 **Step 2: Send Events to your hub**
 
 In this step, you will simulate 3 devices and send data to your IoT Hub
 
-1.  In your IoT hub, go to “IoT devices” and click on “+ Add”
+1.  In your IoT hub, go to “IoT devices” and click on “+ New”
 
-![](media/63cfca44a7a34ec19f09ae1cb2eece78.png)
+    <img src="media/mc/6-create-iot-device.png" width="60%">
 
-2.  Enter “device1” in the “deviceId” textbox and click save (you can leave the
+2.  Enter “device1” in the “deviceId” textbox and click "Save" button (you can leave the
     default settings enabled)
 
-![](media/70d532568688930ba63302ca3f1f3f35.png)
+    <img src="media/mc/7-create-iot-device-id.png" width="60%">
 
 3.  You need to save the primary connection string for the device. Go to “IoT
-    devices” and click on “device 1”
+    devices” and click on “device1”
 
-![](media/4bb1bcf6363e055b2ec93c4cf9ca1e19.png)
+    <img src="media/mc/8-select-device.png" width="60%">
 
-4.  Save the “Connection String (primary key)” for this device. You are going to
+4.  Copy the “Connection String (primary key)” for this device. You are going to
     use this endpoint to send events.
 
-![](media/6bb59c9e69cbae98a9f27b3461b72c24.png)
+    <img src="media/mc/9-copy-sas.png" width="80%">
 
 5.  Repeat the same steps (step 1 – 4) to create 2 new devices with Ids: “device
     2” and “device 3”. Save their primary connection strings as well
@@ -93,23 +91,27 @@ In this step, you will simulate 3 devices and send data to your IoT Hub
     [https://azure-samples.github.io/raspberry-pi-web-simulator/\#GetStarted](https://azure-samples.github.io/raspberry-pi-web-simulator/)
 
 7.  In the “coding area”, replace the placeholder text in Line 15 with the
-    device1 connection string that you saved. (Step 4)
+    primary connection string of the device1 you copied in Step 4.
 
-![](media/81c323627a04f5b45bb368c7e273cb1d.png)
+    <img src="media/mc/10-code-device-connstr.png" width="80%">
 
 8.  Click on “Run” at the bottom right of the page to execute the code. You
     should see messages being sent to the hub.
 
-![](media/5c5fc89dc3d22ae0bd29eb2c68315432.png)
+    <img src="media/mc/11-code-run.png" width="80%">
 
-9.  You need to repeat the same steps (Steps 6-9) for “device 2” and “device 3”
+9.  Follow below instructions to repeat the same steps (Steps 6-9) for “device2” and “device3”
 
 >   Open 2 new tabs in your browser and go to
 >   [https://azure-samples.github.io/raspberry-pi-web-simulator/\#GetStarted](https://azure-samples.github.io/raspberry-pi-web-simulator/).
->   Replace the connection string for devices: “device2” and “device 3” and
+>   Replace the connection string for devices: “device2” and “device3” and
 >   click on run to send events to the hub.
 
 >   **Do not close any of the 3 browser tabs for this lab.**
+
+5 minutes later, you can go to "Overview" panel of IoT Hub to check how many telemetries are sent to IoT Hub, as below:
+
+<img src="media/mc/12-view-telemetry.png" width="80%">
 
 **Step 3: Create a Time Series Preview Environment**
 
