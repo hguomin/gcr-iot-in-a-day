@@ -19,10 +19,10 @@ lab, you will plug in your IoT hub to a TSI environment.
 1.  Sign into Azure Portal using your subscription account
 
 2.  Select **+ Create a resource** in the upper left.
-
+![](media/mc/0-create-a-resource.png)
 3.  Select the **Internet of Things** category, then select **IoT Hub.**
 
-![](media/74695e06cbd9a8356a71117bb70ff87e.png)
+![](media/mc/1-select-iothub.png)
 
 4.  Enter the following:
 
