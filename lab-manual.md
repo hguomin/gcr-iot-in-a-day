@@ -20,11 +20,11 @@ lab, you will plug in your IoT hub to a TSI environment.
 
 2.  Select **+ Create a resource** in the upper left.
 
-    <img src="media/mc/0-create-a-resource.png" width="50%">
+    <img src="media/mc/0-create-a-resource1.png" width="50%">
 
 3.  Select the **Internet of Things** category, then select **IoT Hub.**
 
-    <img src="media/mc/1-select-iothub.png" width="50%">
+    <img src="media/mc/1-select-iothub1.png" width="50%">
 
 4.  Enter the following:
 
