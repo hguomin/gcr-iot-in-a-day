@@ -6,6 +6,7 @@
     
     https://wd.azure.cn/zh-cn/pricing/1rmb-trial-full
     
+    * [Azure试用申请步骤](Azure试用申请.pptx)
 3. Online RPI Simulator Access
     
     https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted
