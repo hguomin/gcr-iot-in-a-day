@@ -113,6 +113,25 @@ In this step, you will simulate 3 devices and send data to your IoT Hub
 
 <img src="media/mc/12-view-telemetry.png" width="80%">
 
+> You can also use the "Azure IoT Explorer" tool to view devices' telemetries. Go to this link: https://github.com/Azure/azure-iot-explorer/releases to download and install the most recent version of the app.  
+> 
+> The first time you run Azure IoT explorer, you're prompted for your IoT hub's connection string. You can find the connection string in "Shared access policies" in your iot hub settings menu. 
+>
+><img src="media/mc/13-iot-hub-conn.png" width="60%">
+>
+>Copy and add your iot hub connection string to Azure IoT Explorer, click "Connect". 
+>
+><img src="media/mc/13-iot-exp-conn.png" width="60%">
+> 
+> Select your device by clicking the device name
+>
+><img src="media/mc/14-iot-exp-select-device.png" width="60%">
+>
+> Select "Telemetry" and click "Start" button, now you can see the telemetries that the device sent.
+>
+><img src="media/mc/15-iot-exp-view-telemetry.png" width="60%">
+>
+
 **Step 3: Create a Time Series Preview Environment**
 
 This section describes how to create a Time Series Insights update environment
